@@ -9,3 +9,16 @@ C:\Users\User\source\repos\YP1\YP1\obj\Debug\netcoreapp3.1\YP1.AssemblyInfoInput
 C:\Users\User\source\repos\YP1\YP1\obj\Debug\netcoreapp3.1\YP1.AssemblyInfo.cs
 C:\Users\User\source\repos\YP1\YP1\obj\Debug\netcoreapp3.1\YP1.dll
 C:\Users\User\source\repos\YP1\YP1\obj\Debug\netcoreapp3.1\YP1.pdb
+C:\Users\runi5\Desktop\studing\Programing Languages\Lab1\YP\YP1\YP1\bin\Debug\netcoreapp3.1\YP1.exe
+C:\Users\runi5\Desktop\studing\Programing Languages\Lab1\YP\YP1\YP1\bin\Debug\netcoreapp3.1\YP1.deps.json
+C:\Users\runi5\Desktop\studing\Programing Languages\Lab1\YP\YP1\YP1\bin\Debug\netcoreapp3.1\YP1.runtimeconfig.json
+C:\Users\runi5\Desktop\studing\Programing Languages\Lab1\YP\YP1\YP1\bin\Debug\netcoreapp3.1\YP1.runtimeconfig.dev.json
+C:\Users\runi5\Desktop\studing\Programing Languages\Lab1\YP\YP1\YP1\bin\Debug\netcoreapp3.1\YP1.dll
+C:\Users\runi5\Desktop\studing\Programing Languages\Lab1\YP\YP1\YP1\bin\Debug\netcoreapp3.1\YP1.pdb
+C:\Users\runi5\Desktop\studing\Programing Languages\Lab1\YP\YP1\YP1\obj\Debug\netcoreapp3.1\YP1.csprojAssemblyReference.cache
+C:\Users\runi5\Desktop\studing\Programing Languages\Lab1\YP\YP1\YP1\obj\Debug\netcoreapp3.1\YP1.csproj.CoreCompileInputs.cache
+C:\Users\runi5\Desktop\studing\Programing Languages\Lab1\YP\YP1\YP1\obj\Debug\netcoreapp3.1\YP1.AssemblyInfoInputs.cache
+C:\Users\runi5\Desktop\studing\Programing Languages\Lab1\YP\YP1\YP1\obj\Debug\netcoreapp3.1\YP1.AssemblyInfo.cs
+C:\Users\runi5\Desktop\studing\Programing Languages\Lab1\YP\YP1\YP1\obj\Debug\netcoreapp3.1\YP1.dll
+C:\Users\runi5\Desktop\studing\Programing Languages\Lab1\YP\YP1\YP1\obj\Debug\netcoreapp3.1\YP1.pdb
+C:\Users\runi5\Desktop\studing\Programing Languages\Lab1\YP\YP1\YP1\obj\Debug\netcoreapp3.1\YP1.genruntimeconfig.cache
