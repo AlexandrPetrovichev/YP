@@ -19,12 +19,15 @@ namespace YP2
         public ConstTable oper = new ConstTable(3);
         private void Create()
         {
-            keywords.ReadFrom("C:\\Users\\User\\source\\repos\\YP2\\YP2\\keywords.txt");
-            operators.ReadFrom("C:\\Users\\User\\source\\repos\\YP2\\YP2\\operators.txt");
-            oper.ReadFrom("C:\\Users\\User\\source\\repos\\YP2\\YP2\\oper.txt");
-            delimiters.ReadFrom("C:\\Users\\User\\source\\repos\\YP2\\YP2\\delimiters.txt");
-            latters.ReadFrom("C:\\Users\\User\\source\\repos\\YP2\\YP2\\letters.txt");
-            nummber.ReadFrom("C:\\Users\\User\\source\\repos\\YP2\\YP2\\num.txt");
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName;
+            projectDirectory = projectDirectory.Substring(0, projectDirectory.Length - 4);
+            keywords.ReadFrom(projectDirectory+"\\keywords.txt");
+            operators.ReadFrom(projectDirectory+"\\operators.txt");
+            oper.ReadFrom(projectDirectory+"\\oper.txt");
+            delimiters.ReadFrom(projectDirectory+"\\delimiters.txt");
+            latters.ReadFrom(projectDirectory+"\\letters.txt");
+            nummber.ReadFrom(projectDirectory+"\\num.txt");
         }
         public int GetNum(string word)
         {

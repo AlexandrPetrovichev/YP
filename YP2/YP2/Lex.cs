@@ -12,7 +12,12 @@ namespace YP2
         public List<string> errors = new List<string>();
         public string[] Read()
         {
-            literals = File.ReadAllLines("C:\\Users\\User\\source\\repos\\YP2\\YP2\\input.txt");
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName;
+            projectDirectory = projectDirectory.Substring(0, projectDirectory.Length - 4);
+
+            
+            literals = File.ReadAllLines(projectDirectory+"\\input.txt");
             return literals;
         }
         public List<string> decoment(string[] s) //удаление пробелов

@@ -162,19 +162,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\runi5\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\YP2\\YP2\\YP2.csproj",
+      "projectUniqueName": "C:\\Users\\runi5\\Desktop\\studing\\Programing Languages\\labs\\YP\\YP2\\YP2\\YP2.csproj",
       "projectName": "YP2",
-      "projectPath": "C:\\Users\\User\\source\\repos\\YP2\\YP2\\YP2.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\YP2\\YP2\\obj\\",
+      "projectPath": "C:\\Users\\runi5\\Desktop\\studing\\Programing Languages\\labs\\YP\\YP2\\YP2\\YP2.csproj",
+      "packagesPath": "C:\\Users\\runi5\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\runi5\\Desktop\\studing\\Programing Languages\\labs\\YP\\YP2\\YP2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\runi5\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -213,12 +213,22 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
