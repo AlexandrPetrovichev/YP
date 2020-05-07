@@ -1,5 +1,6 @@
 ﻿int mai^n()
 {
+int a = - 1;
 	int a = 0;
 	int b = a;
 	//c=wg

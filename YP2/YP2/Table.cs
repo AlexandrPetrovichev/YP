@@ -52,14 +52,9 @@ namespace YP2
 
         public void set(string word)
         {
-
                 Lexem first = new Lexem(word);
                 ind.Add(word, first);
         }
-  
-        public void Out()
-        {
 
-        }
     }
 }

@@ -131,7 +131,7 @@ namespace YP2
                             }
                             bool f = true;
                             foreach (char c in word)
-                                f = f && (t.latters.Contains(c.ToString())) || t.nummber.Contains(c.ToString());
+                                f = f && (t.latters.Contains(c.ToString())) || t.nummber.Contains(c.ToString()) && t.latters.Contains(word[0].ToString());
                             if (!f)
                             {
                                 int i = 0;
