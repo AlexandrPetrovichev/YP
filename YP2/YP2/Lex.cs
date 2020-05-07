@@ -8,8 +8,14 @@ namespace YP2
 {
     class Lex
     {
+        Table t;
         private string[] literals;
         public List<string> errors = new List<string>();
+
+        public Lex(Table table)
+        {
+            t = table;
+        }
         public string[] Read()
         {
             string workingDirectory = Environment.CurrentDirectory;
@@ -53,7 +59,6 @@ namespace YP2
         } 
         public bool string_analize(string str_old)
         {
-            Table t = new Table();
             string ex = @"\s+", str = str_old;
             string[] s = Regex.Split(str, ex);
             string[] q = { "" };

@@ -59,5 +59,22 @@ namespace YP2
                 ind.Add(word, first);
         }
 
+        public void PrinVTables()
+        {
+            Console.WriteLine("Const table:");
+            foreach (var var in constant)
+            {
+                Console.WriteLine(var.ToString());
+            }
+            
+            Console.WriteLine("Identifiers table:");
+            foreach (var var in ind)
+            {
+                Console.WriteLine(var.ToString());
+            }
+            
+            
+        }
+
     }
 }

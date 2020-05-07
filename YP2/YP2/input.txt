@@ -3,11 +3,12 @@
 int a = - 1;
 	int a = 0;
 	int b = a;
+	int c = 12.3.4;
 	//c=wg
 	/*sdf*/
 	a=b++-4;
 	float% b[4];
 	#
-	int a [4[
+	int a [4];
 	return 0;
 }

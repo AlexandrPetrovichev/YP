@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
 
 namespace YP2
 {
@@ -11,12 +12,25 @@ namespace YP2
     class Lexem
     {
         private string name;
-        private int dimension = 0; //размерность: 1 - для переменных и констант
+        private int dimension; //размерность: 1 - для переменных и констант
         private List<bool> isInit = new List<bool>(); //определено ли значение
 
         public Lexem(string name)
         {
+            int k;
+            float t;
             this.name = name;
+            if (int.TryParse(name, out k))
+            {
+                isInit.Add(true);
+                return;
+            }
+            
+            if (float.TryParse(name,out t))
+            {
+                isInit.Add(true);
+            }
+            
         }
 
         public string Name
@@ -49,8 +63,13 @@ namespace YP2
             {
                 if (isInit[i])
                 {
-                    ToReturn += $" {i} ,";
+                    ToReturn += $" {isInit[i]} ,";
                 }
+            }
+
+            if (Dimension == 0)
+            {
+                ToReturn+= false;
             }
 
             return ToReturn;
