@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\YP3\YP3\bin\Debug\netcoreapp3.1\YP3.exe
+C:\Users\User\source\repos\YP3\YP3\bin\Debug\netcoreapp3.1\YP3.deps.json
+C:\Users\User\source\repos\YP3\YP3\bin\Debug\netcoreapp3.1\YP3.runtimeconfig.json
+C:\Users\User\source\repos\YP3\YP3\bin\Debug\netcoreapp3.1\YP3.runtimeconfig.dev.json
+C:\Users\User\source\repos\YP3\YP3\bin\Debug\netcoreapp3.1\YP3.dll
+C:\Users\User\source\repos\YP3\YP3\bin\Debug\netcoreapp3.1\YP3.pdb
+C:\Users\User\source\repos\YP3\YP3\obj\Debug\netcoreapp3.1\YP3.csprojAssemblyReference.cache
+C:\Users\User\source\repos\YP3\YP3\obj\Debug\netcoreapp3.1\YP3.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\YP3\YP3\obj\Debug\netcoreapp3.1\YP3.AssemblyInfo.cs
+C:\Users\User\source\repos\YP3\YP3\obj\Debug\netcoreapp3.1\YP3.dll
+C:\Users\User\source\repos\YP3\YP3\obj\Debug\netcoreapp3.1\YP3.pdb
