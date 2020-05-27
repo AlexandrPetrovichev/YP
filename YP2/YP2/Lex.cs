@@ -45,8 +45,15 @@ namespace YP2
             str = str_1;
             index_1 = str.IndexOf("/*");
             index_2 = str.IndexOf("*/");
-            while (index_1 != -1 && index_2 != -1)
+            
+            while (index_1 != -1)
             {
+                if (index_2 == -1)
+                {
+                    errors.Add("error, couldn't find comment ending");
+                    str = str.Remove(index_1, str.Length - index_1);
+                    break;
+                }
                 if (index_2 > index_1)
                     str = str.Remove(index_1, index_2 - index_1 + 2);
                 //else
@@ -105,7 +112,11 @@ namespace YP2
                         }
                         break;
                     case 10:     //Индентификатор
+                    {
+                        if (word == "1")
                         {
+                            int tmp = 5;
+                        }
                             for (int i = 0; i < word.Length - 1; i++)
                             {
                                 string a = word[i].ToString(), b = word[i + 1].ToString();
@@ -163,8 +174,9 @@ namespace YP2
                                 str = str.Remove(0, str.IndexOf(word) + word.Length);
                                 return string_analize(str);
                             }
+                            break;
                         }
-                        break;
+                        
                     default:        //Что-то плохое
                         {
                             int i = 0;
