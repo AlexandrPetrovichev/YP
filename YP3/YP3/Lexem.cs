@@ -4,14 +4,14 @@ namespace YP3
 {
     enum ValueType
     {
-        undef,
+        notype,
         integer,
         flt
     }
     class Lexem
     {
         private string name;
-        private string type = "notype";
+        public ValueType type = ValueType.notype;
         private List<bool> isInit = new List<bool>(); //определено ли значение
         public Lexem(string name)
         {
@@ -20,10 +20,7 @@ namespace YP3
             public Lexem(string name, int type)
         {
             this.name = name;
-            if (type == 1)
-                this.type = "int";
-            else
-                this.type = "float";
+            this.type = (ValueType) this.type;
         }
 
         public string Name
@@ -32,14 +29,11 @@ namespace YP3
         }
         public string Type
         {
-            get => type;
+            get => type.ToString("G");
         }
         public void setType(int type)
         {
-            if (type == 1)
-                this.type = "int";
-            else
-                this.type = "float";
+            this.type = (ValueType)type;
         }
         public int Dimension
         {

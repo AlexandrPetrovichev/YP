@@ -176,6 +176,18 @@ namespace YP2
                             }
                             break;
                         }
+                    case 11:
+                    {
+                        List<string> l = t.get(word);
+                        Console.WriteLine(l[0] + " " + l[1]);
+                        Lexem first = new Lexem(word);
+                        if(!t.constant.ContainsKey(word))
+                            t.constant.Add(word, first);
+                        str = str.Remove(0, str.IndexOf(word) + word.Length);
+
+
+                        return string_analize(str);
+                    }
                         
                     default:        //Что-то плохое
                         {

@@ -206,7 +206,10 @@ namespace YP3
                         if (curr_row == 54 && need_postfix)
                         {
                             Lexem first = new Lexem("-1");
-                            t.constant.Add("-1", first);
+                            if (!t.constant.ContainsKey("-1"))
+                            {
+                                t.constant.Add("-1", first);
+                            }
                             //t.constant.Add("-1");
                             code_expr_infix.Add(new List<string>() {"11", "-1"});
                             code_expr_infix.Add(new List<string>() { "1", "*"});

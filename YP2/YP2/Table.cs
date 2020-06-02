@@ -40,7 +40,7 @@ namespace YP2
             else if (oper.Contains(word))
                 return 3;
             else if (constant.ContainsKey(word))
-                return 10;
+                return 11;
             else
                 return 10;
         }
