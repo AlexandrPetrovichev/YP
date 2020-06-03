@@ -38,6 +38,11 @@ namespace YP3
                     synt.Out_errors();
             else
                 l.Out_errors();
+
+            string postfix = synt.PostfixString();
+            Generator gen = new Generator(postfix, t);
+            gen.Generate();
+            Console.WriteLine(gen.asmCode);
         }
     }
 }

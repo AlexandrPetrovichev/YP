@@ -184,7 +184,7 @@ namespace YP3
                             }
                             else
                             {
-                                if (!t.ind.ContainsKey(word))
+                                if (!t.identificators.ContainsKey(word))
                                     t.set(word);
                                 List<string> l = t.get(word);
                                 Write(l);

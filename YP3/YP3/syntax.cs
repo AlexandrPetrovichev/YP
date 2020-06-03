@@ -194,7 +194,7 @@ namespace YP3
                         // Обработка необъявленного типа
                         if (!have_type && token_str == "var")
                         {
-                            if (t.ind[curr_token[1]].Type == "notype")
+                            if (t.identificators[curr_token[1]].Type == "notype")
                             {
                                 error_flag = true;
                                 errors.Add("Syntax Error: Undefined identifier "+curr_token[1]);
@@ -224,7 +224,10 @@ namespace YP3
                         if (curr_row == 54 && need_array_resize)
                         {
                             Lexem first = new Lexem("-1");
-                            t.constant.Add("-1", first);
+                            if (!t.constant.ContainsKey("-1"))
+                            {
+                                t.constant.Add("-1", first);
+                            }
                             array_resize_expr_infix.Add(new List<string>() { "11", "-1" });
                             array_resize_expr_infix.Add(new List<string>() { "1", "*" });
                             flag_unary_minus = true;
@@ -276,8 +279,17 @@ namespace YP3
                         if (token_str == "var" && have_type && curr_row == 69)
                         {
                             Lexem first = new Lexem(curr_token[1], type_type);
-                            t.ind[curr_token[1]].setType(type_type);
+                            t.identificators[curr_token[1]].setType(type_type);
                         }
+                        
+                        //в таблицу констант
+                        if (token_str == "const" && have_type && curr_row == 66)
+                        {
+                            Lexem first = new Lexem(curr_token[1], type_type);
+                            t.constant[curr_token[1]].setType(type_type);
+                        }
+                        
+                        
                         curr_token = next_token;
                         if (i < token.Count - 1)
                             next_token = token[i + 1].Split(' ').ToList();
@@ -445,6 +457,16 @@ namespace YP3
                 Console.WriteLine(w);
         }
 
+        public string PostfixString()
+        {
+            string postfix = "";
+            for (int i = 0; i < postfix_record.Count(); i++)
+            {
+                postfix+=postfix_record[i].id + " ";
+            }
+
+            return postfix;
+        }
         public void postfix_print()
         {
             Console.WriteLine("Postfix notation:");

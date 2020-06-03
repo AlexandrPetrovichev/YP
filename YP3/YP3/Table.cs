@@ -9,7 +9,7 @@ namespace YP3
         {
             Create();
         }
-        public VariableTable ind = new VariableTable(10);
+        public VariableTable identificators = new VariableTable(10);
         public VariableTable constant = new VariableTable(11);
         public ConstTable keywords = new ConstTable(0);
         public ConstTable operators = new ConstTable(1);
@@ -44,6 +44,7 @@ namespace YP3
             else
                 return 10;
         }
+        
         public List<string> get(string s)
         {
             int num = GetNum(s);
@@ -56,7 +57,7 @@ namespace YP3
         public void set(string word)
         {
                 Lexem first = new Lexem(word);
-                ind.Add(word, first);
+                identificators.Add(word, first);
         }
 
         public int get_type(string word)
@@ -70,7 +71,7 @@ namespace YP3
         public void Out()
         {
             Console.WriteLine("Variable");
-            foreach (var i in ind)
+            foreach (var i in identificators)
                 Console.WriteLine("Name = " + i.Value.Name + "\tType = " + i.Value.Type + "\tDim = " +
                     i.Value.Dimension);
             Console.WriteLine("Constant");
