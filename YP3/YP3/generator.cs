@@ -10,6 +10,7 @@ namespace YP3
 {
     class Generator
     {
+        private int compCount = 0;
         private List<string> errors = new List<string>();
         private string note;
         public Table t;
@@ -165,12 +166,19 @@ namespace YP3
             switch (operation)
             {
                 case "+":
-                    left= st.Pop();
-                    right = st.Pop();
-                    rez+=LoadVar(left);
-                    rez+=LoadVar(right);
+                    if (first)
+                    {
+                        left= st.Pop();
+                        right = st.Pop();
+                        rez+=LoadVar(left);
+                        rez+=LoadVar(right);
+                    }
+                    else
+                    {
+                        right = st.Pop();
+                        rez+=LoadVar(right);
+                    }
                     rez += "\tfadd\n";
-                    first = false;
                     break;
                 case "-":
                     if (first)
@@ -191,12 +199,19 @@ namespace YP3
 
                     break;
                 case "*": 
-                    right= st.Pop();
-                    left = st.Pop();
-                    rez+=LoadVar(left);
-                    rez+=LoadVar(right);
+                    if (first)
+                    {
+                        left= st.Pop();
+                        right = st.Pop();
+                        rez+=LoadVar(left);
+                        rez+=LoadVar(right);
+                    }
+                    else
+                    {
+                        right = st.Pop();
+                        rez+=LoadVar(right);
+                    }
                     rez += "\tfmul\n";
-                    first = false;
                     break;
                 case "=":
                     if (first)
@@ -227,8 +242,53 @@ namespace YP3
                     }
                   
                     break;
-                case "[]": //ToDO
+                case "[]":
+                    left = st.Pop();
+                    right = st.Pop();
+                    Lexem fromDim = new Lexem($"[{left.Name}+{4*Int32.Parse(right.Name)}",(int)left.type);
+                    st.Push(fromDim);
                     break;
+            }
+
+            if (operation == "<" || operation == ">" || operation =="==" || operation == "!=")
+            {
+                compCount++;
+                string mark = $"jmp_cmp_{compCount}";
+                
+                right = st.Pop();
+                left = st.Pop();
+                rez+=LoadVar(right);
+                rez+=LoadVar(left);
+                string jxx = "";
+                switch (operation)
+                {
+                    case "==":
+                        jxx = "je";
+                        break;
+                    case "!=":
+                        jxx = "jne";
+                        break;
+                    case "<":
+                        jxx = "jl";
+                        break;
+                    case ">":
+                        jxx = "jb";
+                        break;
+                }
+
+                rez += "\tfstp tmp_comp\n" +
+                       "\tfcom tmp_comp\n" +
+                       "\tfstp tmp_comp\n" +
+                       "\tfstsw ax\n" +
+                       "\tsahf\n" +
+                       $"{jxx} {mark}\n" +
+                       ";else\n" +
+                       "fldz\n" +
+                       $"jmp {mark}_end\n" +
+                       ";then\n" +
+                       $"{mark}:\n" +
+                       "fld1\n\n" +
+                       $"{mark}_end:\n";
             }
             return rez;
         }
